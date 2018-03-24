@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Gakki爱吃的小鱼干</title>
+  
+  <subtitle>怕年华虚度  空余一身疲倦</subtitle>
+  <link href="/atom.xml" rel="self"/>
+  
+  <link href="http://yoursite.com/"/>
+  <updated>2018-03-24T11:41:29.415Z</updated>
+  <id>http://yoursite.com/</id>
+  
+  <author>
+    <name>青鱼y</name>
+    
+  </author>
+  
+  <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>如何用css制作一个太极图案</title>
+    <link href="http://yoursite.com/2018/03/24/%E5%A6%82%E4%BD%95%E7%94%A8css%E5%88%B6%E4%BD%9C%E4%B8%80%E4%B8%AA%E5%A4%AA%E6%9E%81%E5%9B%BE%E6%A1%88/"/>
+    <id>http://yoursite.com/2018/03/24/如何用css制作一个太极图案/</id>
+    <published>2018-03-24T06:44:05.000Z</published>
+    <updated>2018-03-24T11:41:29.415Z</updated>
+    
+    <content type="html"><![CDATA[<p>css功能多种多样，使用::before 和  ::after生成的伪元素可以在一个div元素中创造内部图案</p><h2 id="先制作一个圆形"><a href="#先制作一个圆形" class="headerlink" title="先制作一个圆形"></a>先制作一个圆形</h2><p>在html中定义一个div元素:</p><pre><code>&lt;div class=&quot;yin-yang&quot;&gt;&lt;/div&gt;</code></pre><p>在css中配置样式:</p><pre><code>.yin-yang {        width: 100px;        height: 50px;        background: white;        border:1px solid black;        border-width:1px 1px 51px 1px;/*用来填充圆形下半部分，51px=50px元素背景+1px边框使上下对称*/        border-radius:50%;  /*定义边框半径占整体的比例，越接近50%越像一个圆*/        position:relative;/*与下面的伪元素position配合使用*/}</code></pre><a id="more"></a><h2 id="制作圆内伪元素"><a href="#制作圆内伪元素" class="headerlink" title="制作圆内伪元素"></a>制作圆内伪元素</h2><p>在css中配置样式：</p><pre><code>  .yin-yang::before {         content: &quot;&quot;;         position:absolute;/*不为元素预留空间，通过指定元素相对于最近的非 static 定位祖先元素(即yin-yang)的偏移，来确定元素位置*/         height:15px;         width:15px;/*定义元素（即太极图案内部小洞洞）大小*/         background: white;         border-radius:50%;         border:17.5px black solid;/*太极内部圆的大小*/        margin-top:20px;/*也可以用 top来定位*/   }.yin-yang::after {         content: &quot;&quot;;         position:absolute;         height:15px;         width:15px;         background:black;            border-radius:50%;          border:17.5px white solid;         margin-left:50px;         margin-top:20px /*也可以用top和left来定位*/   }</code></pre><p><br></p><p>最终结果：<img src="https://upload-images.jianshu.io/upload_images/11120567-fc5935be70bf2525.PNG?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="捕获.PNG"> </p><p>参考来自  css.tricks(好像要科学上网才能看):  <a href="https://css-tricks.com/examples/ShapesOfCSS/" target="_blank" rel="noopener">https://css-tricks.com/examples/ShapesOfCSS/</a></p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;css功能多种多样，使用::before 和  ::after生成的伪元素可以在一个div元素中创造内部图案&lt;/p&gt;
+&lt;h2 id=&quot;先制作一个圆形&quot;&gt;&lt;a href=&quot;#先制作一个圆形&quot; class=&quot;headerlink&quot; title=&quot;先制作一个圆形&quot;&gt;&lt;/a&gt;先制作一个圆形&lt;/h2&gt;&lt;p&gt;在html中定义一个div元素:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;&amp;lt;div class=&amp;quot;yin-yang&amp;quot;&amp;gt;&amp;lt;/div&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;在css中配置样式:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;.yin-yang {
+        width: 100px;
+        height: 50px;
+        background: white;
+        border:1px solid black;
+        border-width:1px 1px 51px 1px;/*用来填充圆形下半部分，51px=50px元素背景+1px边框使上下对称*/
+        border-radius:50%;  /*定义边框半径占整体的比例，越接近50%越像一个圆*/
+        position:relative;/*与下面的伪元素position配合使用*/
+}
+&lt;/code&gt;&lt;/pre&gt;
+    
+    </summary>
+    
+    
+      <category term="前端" scheme="http://yoursite.com/tags/%E5%89%8D%E7%AB%AF/"/>
+    
+      <category term="CSS" scheme="http://yoursite.com/tags/CSS/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>用Hexo+Github搭建一个博客（不完全指南）</title>
+    <link href="http://yoursite.com/2018/03/07/%E7%94%A8Hexo-Github%E6%90%AD%E5%BB%BA%E4%B8%80%E4%B8%AA%E5%8D%9A%E5%AE%A2/"/>
+    <id>http://yoursite.com/2018/03/07/用Hexo-Github搭建一个博客/</id>
+    <published>2018-03-07T12:48:05.000Z</published>
+    <updated>2018-03-24T11:41:13.633Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="安装Hexo"><a href="#安装Hexo" class="headerlink" title="安装Hexo"></a>安装Hexo</h3><p> 在gitbash 中输入：</p><pre><code>npm install -g hexo-cli</code></pre><h3 id="Github上创建一个新仓库"><a href="#Github上创建一个新仓库" class="headerlink" title="Github上创建一个新仓库"></a>Github上创建一个新仓库</h3><p>在 GitHub 上新建一个空 repo，repo 名称是「你的用户名.github.io」（请将你的用户名替换成真正的用户名）</p><h3 id="创建目录"><a href="#创建目录" class="headerlink" title="创建目录"></a>创建目录</h3><p>在任意空白处创建一个文件夹，用Gitbash打开该文件夹，并执行以下指令</p><pre><code>hexo init</code></pre><p>Hexo 即会自动在目标文件夹建立网站所需要的所有文件</p><a id="more"></a><h3 id="安装依赖包"><a href="#安装依赖包" class="headerlink" title="安装依赖包"></a>安装依赖包</h3><pre><code>npm install</code></pre><h3 id="编辑网站配置"><a href="#编辑网站配置" class="headerlink" title="编辑网站配置"></a>编辑网站配置</h3><p>   用vs code编辑 _config.yml 文件<br>    1.把第 6 行的 title 改成你想要的名字<br>    2.把第 9 行的 author 改成你的大名<br>    3.把最后一行的 type 改成 type: git<br>    4.在最后一行后面新增一行，左边与 type 平齐，加上一行 repo: 仓库地址 （请将仓库地址改为「你的用户名.github.io」对应的仓库地址</p><h3 id="安装-git-部署插件"><a href="#安装-git-部署插件" class="headerlink" title="安装 git 部署插件"></a>安装 git 部署插件</h3><pre><code>npm install hexo-deployer-git --save</code></pre><h3 id="生成网页并部署"><a href="#生成网页并部署" class="headerlink" title="生成网页并部署"></a>生成网页并部署</h3><p>gitbash中输入</p><pre><code>hexo generatehexo deploy</code></pre><p>出现以下提示说明部署成功：</p><pre><code>[info] Deploy done: git</code></pre>]]></content>
+    
+    <summary type="html">
+    
+      &lt;h3 id=&quot;安装Hexo&quot;&gt;&lt;a href=&quot;#安装Hexo&quot; class=&quot;headerlink&quot; title=&quot;安装Hexo&quot;&gt;&lt;/a&gt;安装Hexo&lt;/h3&gt;&lt;p&gt; 在gitbash 中输入：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;npm install -g hexo-cli
+&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&quot;Github上创建一个新仓库&quot;&gt;&lt;a href=&quot;#Github上创建一个新仓库&quot; class=&quot;headerlink&quot; title=&quot;Github上创建一个新仓库&quot;&gt;&lt;/a&gt;Github上创建一个新仓库&lt;/h3&gt;&lt;p&gt;在 GitHub 上新建一个空 repo，repo 名称是「你的用户名.github.io」（请将你的用户名替换成真正的用户名）&lt;/p&gt;
+&lt;h3 id=&quot;创建目录&quot;&gt;&lt;a href=&quot;#创建目录&quot; class=&quot;headerlink&quot; title=&quot;创建目录&quot;&gt;&lt;/a&gt;创建目录&lt;/h3&gt;&lt;p&gt;在任意空白处创建一个文件夹，用Gitbash打开该文件夹，并执行以下指令&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;hexo init
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Hexo 即会自动在目标文件夹建立网站所需要的所有文件&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="前端" scheme="http://yoursite.com/tags/%E5%89%8D%E7%AB%AF/"/>
+    
+  </entry>
+  
+</feed>

@@ -19,8 +19,6 @@
 <meta name="twitter:title" content="Gakki爱吃的小鱼干">
 <meta name="twitter:description" content="For thE Best Aragakki Yui">
   
-    <link rel="alternative" href="/atom.xml" title="Gakki爱吃的小鱼干" type="application/atom+xml">
-  
   
     <link rel="icon" href="/img/favicon.png">
   
@@ -58,9 +56,11 @@
 		<nav class="header-menu">
 			<ul>
 			
-				<li><a href="/">前端</a></li>
+				<li><a href="/tags/前端/">前端</a></li>
 	        
 				<li><a href="/tags/随笔/">随笔</a></li>
+	        
+				<li><a href="/tags/阅读/">阅读</a></li>
 	        
 			</ul>
 		</nav>
@@ -83,6 +83,8 @@
 					<a class="github" target="_blank" href="https://github.com/yyhsz" title="github"><i class="icon-github"></i></a>
 		        
 					<a class="zhihu" target="_blank" href="https://www.zhihu.com/people/xie-qiu-xie/activities" title="zhihu"><i class="icon-zhihu"></i></a>
+		        
+					<a class="rss" target="_blank" href="/atom.xml" title="rss"><i class="icon-rss"></i></a>
 		        
 			</div>
 		</nav>
@@ -114,6 +116,8 @@
 			
 				
 			
+				
+			
 			
 			
 			<nav class="header-nav">
@@ -123,16 +127,20 @@
 			        
 						<a class="zhihu" target="_blank" href="https://www.zhihu.com/people/xie-qiu-xie/activities" title="zhihu"><i class="icon-zhihu"></i></a>
 			        
+						<a class="rss" target="_blank" href="/atom.xml" title="rss"><i class="icon-rss"></i></a>
+			        
 				</div>
 			</nav>
 
 			<nav class="header-menu js-header-menu">
-				<ul style="width: 50%">
+				<ul style="width: 70%">
 				
 				
-					<li style="width: 50%"><a href="/">前端</a></li>
+					<li style="width: 33.333333333333336%"><a href="/tags/前端/">前端</a></li>
 		        
-					<li style="width: 50%"><a href="/tags/随笔/">随笔</a></li>
+					<li style="width: 33.333333333333336%"><a href="/tags/随笔/">随笔</a></li>
+		        
+					<li style="width: 33.333333333333336%"><a href="/tags/阅读/">阅读</a></li>
 		        
 				</ul>
 			</nav>
@@ -182,31 +190,10 @@
         border-radius:50%;  /*定义边框半径占整体的比例，越接近50%越像一个圆*/
         position:relative;/*与下面的伪元素position配合使用*/
 }
-</code></pre><h2 id="制作圆内伪元素"><a href="#制作圆内伪元素" class="headerlink" title="制作圆内伪元素"></a>制作圆内伪元素</h2><p>在css中配置样式：</p>
-<pre><code>  .yin-yang::before {
-         content: &quot;&quot;;
-         position:absolute;/*不为元素预留空间，通过指定元素相对于最近的非 static 定位祖先元素(即yin-yang)的偏移，来确定元素位置*/
-         height:15px;
-         width:15px;/*定义元素（即太极图案内部小洞洞）大小*/
-         background: white;
-         border-radius:50%;
-         border:17.5px black solid;/*太极内部圆的大小*/
-        margin-top:20px;/*也可以用 top来定位*/   }
-
-.yin-yang::after {
-         content: &quot;&quot;;
-         position:absolute;
-         height:15px;
-         width:15px;
-         background:black;   
-         border-radius:50%; 
-         border:17.5px white solid;
-         margin-left:50px;
-         margin-top:20px /*也可以用top和left来定位*/   }
-</code></pre><p><br></p>
-<p>最终结果：<img src="https://upload-images.jianshu.io/upload_images/11120567-fc5935be70bf2525.PNG?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="捕获.PNG"> </p>
-<p>参考来自  css.tricks(好像要科学上网才能看):  <a href="https://css-tricks.com/examples/ShapesOfCSS/" target="_blank" rel="noopener">https://css-tricks.com/examples/ShapesOfCSS/</a></p>
-
+</code></pre>
+        
+          <a class="article-more-a" href="/2018/03/24/如何用css制作一个太极图案/#more">more >></a>
+        
       
 
       
@@ -214,6 +201,21 @@
     <div class="article-info article-info-index">
       
       
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">前端</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">CSS</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
       
 
       
@@ -274,15 +276,9 @@
 <h3 id="创建目录"><a href="#创建目录" class="headerlink" title="创建目录"></a>创建目录</h3><p>在任意空白处创建一个文件夹，用Gitbash打开该文件夹，并执行以下指令</p>
 <pre><code>hexo init
 </code></pre><p>Hexo 即会自动在目标文件夹建立网站所需要的所有文件</p>
-<h3 id="安装依赖包"><a href="#安装依赖包" class="headerlink" title="安装依赖包"></a>安装依赖包</h3><pre><code>npm install
-</code></pre><h3 id="编辑网站配置"><a href="#编辑网站配置" class="headerlink" title="编辑网站配置"></a>编辑网站配置</h3><p>   用vs code编辑 _config.yml 文件<br>    1.把第 6 行的 title 改成你想要的名字<br>    2.把第 9 行的 author 改成你的大名<br>    3.把最后一行的 type 改成 type: git<br>    4.在最后一行后面新增一行，左边与 type 平齐，加上一行 repo: 仓库地址 （请将仓库地址改为「你的用户名.github.io」对应的仓库地址</p>
-<h3 id="安装-git-部署插件"><a href="#安装-git-部署插件" class="headerlink" title="安装 git 部署插件"></a>安装 git 部署插件</h3><pre><code>npm install hexo-deployer-git --save
-</code></pre><h3 id="生成网页并部署"><a href="#生成网页并部署" class="headerlink" title="生成网页并部署"></a>生成网页并部署</h3><p>gitbash中输入</p>
-<pre><code>hexo generate
-hexo deploy
-</code></pre><p>出现以下提示说明部署成功：</p>
-<pre><code>[info] Deploy done: git
-</code></pre>
+        
+          <a class="article-more-a" href="/2018/03/07/用Hexo-Github搭建一个博客/#more">more >></a>
+        
       
 
       
@@ -295,7 +291,7 @@ hexo deploy
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">Github  Hexo</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">前端</a>
         		</li>
       		
 		</ul>
@@ -342,6 +338,9 @@ hexo deploy
         </div>
       </div>
       <footer id="footer">
+		<script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js">
+		</script>
+		
   <div class="outer">
     <div id="footer-info">
     	<div class="footer-left">
@@ -352,6 +351,7 @@ hexo deploy
       	</div>
     </div>
   </div>
+	
 </footer>
     </div>
     <script>
@@ -425,6 +425,14 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">Github  Hexo</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">前端</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">CSS</a>
               </li>
             
             <div class="clearfix"></div>
