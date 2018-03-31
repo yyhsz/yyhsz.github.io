@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2018-03-24T11:41:29.415Z</updated>
+  <updated>2018-03-31T12:37:34.023Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,64 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>入门：HTTP 笔记</title>
+    <link href="http://yoursite.com/2018/03/31/%E5%85%A5%E9%97%A8%EF%BC%9AHTTP/"/>
+    <id>http://yoursite.com/2018/03/31/入门：HTTP/</id>
+    <published>2018-03-31T11:36:45.000Z</published>
+    <updated>2018-03-31T12:37:34.023Z</updated>
+    
+    <content type="html"><![CDATA[<p>##http入门</p><p>####一些零碎的知识点</p><ul><li><p>www:world wide web,万维网之父：Tim Berners-Lee</p></li><li><p>URI(统一资源标识符):uniform resource identifier</p></li><li><p>URL(统一资源定位符):uniform resource locator</p></li><li><p>URN(统一资源命名符)：uniform resource name</p></li></ul><p>通过urn来确定一个<em>唯一</em> 的资源<br>通过url来确定一个地址（网址）但不清楚其中内容是什么，并且其内容可以更换<br>uri是url和urn的统称,URN定义某事物的身份，而URL提供查找该事物的方法。</p><p><img src="https://i.loli.net/2018/03/31/5abf6f72acaa0.jpg" alt="url"><br><a id="more"></a></p><ul><li><p>DNS(域名系统):domain name system<br>是互联网的一项服务。它作为将域名和IP地址相互映射的一个分布式数据库</p></li><li><p>修改host文件可以暂时科学上网</p></li><li>.com , .cn , .mobi etc 是顶级（一级）域名 ； xxx是二级域名 ；www.   是三级域名 ； （交流中默认xxx是一级域名）</li></ul><p>##请求与响应</p><p><img src="https://i.loli.net/2018/03/31/5abf72dfc38cb.jpg" alt="请求与响应"><br>http协议下服务器与浏览器一般是单项访问，如同打乒乓<br>使用qq聊天就不能算是http协议<br>每一台服务器有很多端口，每一个端口只有一种功能,其中80端口是用于服务http协议,如果要做一个后台服务器，必须将80端口暴露给人用</p><ul><li>浏览器负责发起请求</li><li>服务器在80端口接收请求</li><li>服务器负责返回内容（响应）</li><li><p>浏览器负责下载响应内容<br>HTTP的作用就是指导浏览器和服务器的沟通</p><hr><p>  curl -s -v -H “lalala” – “<a href="http://www.baidu.com&quot;" target="_blank" rel="noopener">www.baidu.com&quot;</a><br>curl:发出网络请求并接收数据s:不要显示进度 v:使请求和响应更详细 -H：显示请求头</p></li></ul><p>发出请求：</p><pre><code>1. 动词(GET/POST) 路径(/xxx) 协议/版本(HTTP/1.1)2. Key1: value12. Key2: value22. Key3: value32. 希望返回内容:xxx/xxx(Accept:text/html)2. 用户代理：xxxx(User-Agent:curl/xxxx)2. 访问主机：(Host:xxxx)3. (回车)4. 要上传的数据</code></pre><p>响应：</p><pre><code>1. 协议/版本号 状态码 状态解释2 Key1: value12 Key2: value22 Content-Length: 179312 Content-Type: text/html;charset:utf-8;34 要下载的内容</code></pre><p>可以用开发者工具的Network查看响应的第4部分</p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;##http入门&lt;/p&gt;
+&lt;p&gt;####一些零碎的知识点&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;www:world wide web,万维网之父：Tim Berners-Lee&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;URI(统一资源标识符):uniform resource identifier&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;URL(统一资源定位符):uniform resource locator&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;URN(统一资源命名符)：uniform resource name&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;通过urn来确定一个&lt;em&gt;唯一&lt;/em&gt; 的资源&lt;br&gt;通过url来确定一个地址（网址）但不清楚其中内容是什么，并且其内容可以更换&lt;br&gt;uri是url和urn的统称,URN定义某事物的身份，而URL提供查找该事物的方法。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://i.loli.net/2018/03/31/5abf6f72acaa0.jpg&quot; alt=&quot;url&quot;&gt;&lt;br&gt;
+    
+    </summary>
+    
+    
+      <category term="前端" scheme="http://yoursite.com/tags/%E5%89%8D%E7%AB%AF/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>入门：脚本 笔记</title>
+    <link href="http://yoursite.com/2018/03/30/%E5%85%A5%E9%97%A8%EF%BC%9A%E8%84%9A%E6%9C%AC/"/>
+    <id>http://yoursite.com/2018/03/30/入门：脚本/</id>
+    <published>2018-03-30T09:36:45.000Z</published>
+    <updated>2018-03-31T11:32:25.582Z</updated>
+    
+    <content type="html"><![CDATA[<p>##命令行 “.bashrc”的小用处<br>1.在用户目录下创建 .bashrc 文件</p><pre><code>touch ~/.bashrc</code></pre><p>用编辑器在这个文件里创建一些命令，就可以在进入Git bash之前执行任何命令<br>2.在.bashrc中添加alias命令来简化已有命令</p><pre><code>alias n=&quot;mkdir ~/a.html&quot;</code></pre><p>作用是运行<kbd>n</kbd>就在用户目录创建a.html文件<br>你可以把常用的命令进行简化使git操作简单很多</p><p>3.可以在“.bashrc”中添加环境变量</p><a id="more"></a><p>4.设置PATH</p><pre><code>export PATH=&quot;目录的绝对路径:$PATH&quot;</code></pre><p>可以在PATH里添加一个目录，被你添加到PATH中的目录下的文件都可以不需要加路径直接运行，你每次在 Bash 里面输入一个命令时（比如 ls、cp、demo），Bash 都会去 PATH 列表里面寻找对应的文件，如果找到了就执行。</p><p><hr></p><p>##脚本<br>在用户目录创建一个名为“demo”的文件（后缀随意）<br>用编辑器编辑它:</p><pre><code>cd ~/desktopmkdir scriptcd scripttouch a.html b.css</code></pre><p>在bash中用<kbd>sh</kbd>命令执行这个脚本</p><pre><code>sh ~/demo</code></pre><p>你就可以在桌面上看到 “script” 文件，点进去还有a.html, b.css<br>这就是脚本，写给计算机看的剧本，计算机会按你写的命令一条条执行。</p><p>####在脚本中引入参数<br>把“demo”内容改成：</p><pre><code>cd ~/desktopmkdir $1cd $1touch $2.html $3.css</code></pre><p>执行脚本时加上参数：</p><pre><code>sh ~/demo ni shi zhu</code></pre><p>你就可以在桌面上看到 “ni” 文件，点进去还有shi.html,  zhu.css<br>当你在脚本女重写入$符号，计算机就会按数字顺序读取你输入的参数</p><p>上面我们写的脚本叫做 Bash Script（Bash脚本），JS 的全称叫做 JavaScript（Java脚本），虽然 JS 和 Java 没什么关系，但是 JS 依然是一种脚本。</p><p>我们在 Bash 命令行里输入 Bash 命令，也可以在 Node.js 命令行里输入 JS 命令,Bash 脚本能做的事情，JS 脚本也能做。(sh demo.sh 对应 node demo.js）</p><p>如果你安装过node.js 在bash里输入node即可进入node运行环境</p><p>两者语法会有所不同，不必专门去学，需要用到时去学即可<br>在Google上查询语法的关键字应是：</p><pre><code>bash(node.js) + xxxxx</code></pre><p>####shebang<br>我们每次执行js脚本都要用 <kbd>node</kbd> 来执行(不知道怎么在node环境中执行？)，能不能做到不加 node 也能执行呢（也就是指定执行环境），可以，在 js脚本第一行加上这一句即可：</p><pre><code>#!/usr/bin/env node</code></pre><p>所以shebang的作用就是指定执行环境</p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;##命令行 “.bashrc”的小用处&lt;br&gt;1.在用户目录下创建 .bashrc 文件&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;touch ~/.bashrc
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;用编辑器在这个文件里创建一些命令，就可以在进入Git bash之前执行任何命令&lt;br&gt;2.在.bashrc中添加alias命令来简化已有命令&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;alias n=&amp;quot;mkdir ~/a.html&amp;quot;
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;作用是运行&lt;kbd&gt;n&lt;/kbd&gt;就在用户目录创建a.html文件&lt;br&gt;你可以把常用的命令进行简化使git操作简单很多&lt;/p&gt;
+&lt;p&gt;3.可以在“.bashrc”中添加环境变量&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="前端" scheme="http://yoursite.com/tags/%E5%89%8D%E7%AB%AF/"/>
+    
+  </entry>
   
   <entry>
     <title>如何用css制作一个太极图案</title>
