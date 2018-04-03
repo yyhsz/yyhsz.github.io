@@ -8,18 +8,18 @@
   <link rel="dns-prefetch" href="http://yoursite.com">
   <title>入门：脚本 笔记 | Gakki爱吃的小鱼干</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="##命令行 “.bashrc”的小用处1.在用户目录下创建 .bashrc 文件 touch ~/.bashrc 用编辑器在这个文件里创建一些命令，就可以在进入Git bash之前执行任何命令2.在.bashrc中添加alias命令来简化已有命令 alias n=&amp;quot;mkdir ~/a.html&amp;quot; 作用是运行n就在用户目录创建a.html文件你可以把常用的命令进行简化使git操作">
+  <meta name="description" content="命令行 “.bashrc”的小用处1.在用户目录下创建 .bashrc 文件 touch ~/.bashrc 用编辑器在这个文件里创建一些命令，就可以在进入Git bash之前执行任何命令2.在.bashrc中添加alias命令来简化已有命令 alias n=&amp;quot;mkdir ~/a.html&amp;quot; 作用是运行n就在用户目录创建a.html文件你可以把常用的命令进行简化使git操作简单">
 <meta name="keywords" content="前端">
 <meta property="og:type" content="article">
 <meta property="og:title" content="入门：脚本 笔记">
 <meta property="og:url" content="http://yoursite.com/2018/03/30/入门：脚本/index.html">
 <meta property="og:site_name" content="Gakki爱吃的小鱼干">
-<meta property="og:description" content="##命令行 “.bashrc”的小用处1.在用户目录下创建 .bashrc 文件 touch ~/.bashrc 用编辑器在这个文件里创建一些命令，就可以在进入Git bash之前执行任何命令2.在.bashrc中添加alias命令来简化已有命令 alias n=&amp;quot;mkdir ~/a.html&amp;quot; 作用是运行n就在用户目录创建a.html文件你可以把常用的命令进行简化使git操作">
+<meta property="og:description" content="命令行 “.bashrc”的小用处1.在用户目录下创建 .bashrc 文件 touch ~/.bashrc 用编辑器在这个文件里创建一些命令，就可以在进入Git bash之前执行任何命令2.在.bashrc中添加alias命令来简化已有命令 alias n=&amp;quot;mkdir ~/a.html&amp;quot; 作用是运行n就在用户目录创建a.html文件你可以把常用的命令进行简化使git操作简单">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-03-31T11:32:25.582Z">
+<meta property="og:updated_time" content="2018-04-03T13:20:57.798Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="入门：脚本 笔记">
-<meta name="twitter:description" content="##命令行 “.bashrc”的小用处1.在用户目录下创建 .bashrc 文件 touch ~/.bashrc 用编辑器在这个文件里创建一些命令，就可以在进入Git bash之前执行任何命令2.在.bashrc中添加alias命令来简化已有命令 alias n=&amp;quot;mkdir ~/a.html&amp;quot; 作用是运行n就在用户目录创建a.html文件你可以把常用的命令进行简化使git操作">
+<meta name="twitter:description" content="命令行 “.bashrc”的小用处1.在用户目录下创建 .bashrc 文件 touch ~/.bashrc 用编辑器在这个文件里创建一些命令，就可以在进入Git bash之前执行任何命令2.在.bashrc中添加alias命令来简化已有命令 alias n=&amp;quot;mkdir ~/a.html&amp;quot; 作用是运行n就在用户目录创建a.html文件你可以把常用的命令进行简化使git操作简单">
   
   
     <link rel="icon" href="/img/favicon.png">
@@ -177,7 +177,7 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>##命令行 “.bashrc”的小用处<br>1.在用户目录下创建 .bashrc 文件</p>
+        <p></p><h2>命令行 “.bashrc”的小用处</h2><br>1.在用户目录下创建 .bashrc 文件<p></p>
 <pre><code>touch ~/.bashrc
 </code></pre><p>用编辑器在这个文件里创建一些命令，就可以在进入Git bash之前执行任何命令<br>2.在.bashrc中添加alias命令来简化已有命令</p>
 <pre><code>alias n=&quot;mkdir ~/a.html&quot;
@@ -196,7 +196,7 @@ touch a.html b.css
 </code></pre><p>在bash中用<kbd>sh</kbd>命令执行这个脚本</p>
 <pre><code>sh ~/demo
 </code></pre><p>你就可以在桌面上看到 “script” 文件，点进去还有a.html, b.css<br>这就是脚本，写给计算机看的剧本，计算机会按你写的命令一条条执行。</p>
-<p>####在脚本中引入参数<br>把“demo”内容改成：</p>
+<p></p><h4> 在脚本中引入参数</h4><br>把“demo”内容改成：<p></p>
 <pre><code>cd ~/desktop
 mkdir $1
 cd $1
@@ -209,7 +209,7 @@ touch $2.html $3.css
 <p>如果你安装过node.js 在bash里输入node即可进入node运行环境</p>
 <p>两者语法会有所不同，不必专门去学，需要用到时去学即可<br>在Google上查询语法的关键字应是：</p>
 <pre><code>bash(node.js) + xxxxx
-</code></pre><p>####shebang<br>我们每次执行js脚本都要用 <kbd>node</kbd> 来执行(不知道怎么在node环境中执行？)，能不能做到不加 node 也能执行呢（也就是指定执行环境），可以，在 js脚本第一行加上这一句即可：</p>
+</code></pre><p></p><h4> shebang</h4><br>我们每次执行js脚本都要用 <kbd>node</kbd> 来执行(不知道怎么在node环境中执行？)，能不能做到不加 node 也能执行呢（也就是指定执行环境），可以，在 js脚本第一行加上这一句即可：<p></p>
 <pre><code>#!/usr/bin/env node
 </code></pre><p>所以shebang的作用就是指定执行环境</p>
 
@@ -295,11 +295,11 @@ touch $2.html $3.css
   
 <nav id="article-nav">
   
-    <a href="/2018/03/31/入门：HTTP/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2018/03/31/暗时间/" id="article-nav-newer" class="article-nav-link-wrap">
       <i class="icon-circle-left"></i>
       <div class="article-nav-title">
         
-          入门：HTTP 笔记
+          暗时间阅读笔记
         
       </div>
     </a>
@@ -437,6 +437,14 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">CSS</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">随笔</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">阅读</a>
               </li>
             
             <div class="clearfix"></div>

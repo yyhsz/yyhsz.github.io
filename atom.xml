@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2018-03-31T12:37:34.023Z</updated>
+  <updated>2018-04-03T13:20:20.970Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -21,14 +21,15 @@
     <link href="http://yoursite.com/2018/03/31/%E5%85%A5%E9%97%A8%EF%BC%9AHTTP/"/>
     <id>http://yoursite.com/2018/03/31/入门：HTTP/</id>
     <published>2018-03-31T11:36:45.000Z</published>
-    <updated>2018-03-31T12:37:34.023Z</updated>
+    <updated>2018-04-03T13:20:20.970Z</updated>
     
-    <content type="html"><![CDATA[<p>##http入门</p><p>####一些零碎的知识点</p><ul><li><p>www:world wide web,万维网之父：Tim Berners-Lee</p></li><li><p>URI(统一资源标识符):uniform resource identifier</p></li><li><p>URL(统一资源定位符):uniform resource locator</p></li><li><p>URN(统一资源命名符)：uniform resource name</p></li></ul><p>通过urn来确定一个<em>唯一</em> 的资源<br>通过url来确定一个地址（网址）但不清楚其中内容是什么，并且其内容可以更换<br>uri是url和urn的统称,URN定义某事物的身份，而URL提供查找该事物的方法。</p><p><img src="https://i.loli.net/2018/03/31/5abf6f72acaa0.jpg" alt="url"><br><a id="more"></a></p><ul><li><p>DNS(域名系统):domain name system<br>是互联网的一项服务。它作为将域名和IP地址相互映射的一个分布式数据库</p></li><li><p>修改host文件可以暂时科学上网</p></li><li>.com , .cn , .mobi etc 是顶级（一级）域名 ； xxx是二级域名 ；www.   是三级域名 ； （交流中默认xxx是一级域名）</li></ul><p>##请求与响应</p><p><img src="https://i.loli.net/2018/03/31/5abf72dfc38cb.jpg" alt="请求与响应"><br>http协议下服务器与浏览器一般是单项访问，如同打乒乓<br>使用qq聊天就不能算是http协议<br>每一台服务器有很多端口，每一个端口只有一种功能,其中80端口是用于服务http协议,如果要做一个后台服务器，必须将80端口暴露给人用</p><ul><li>浏览器负责发起请求</li><li>服务器在80端口接收请求</li><li>服务器负责返回内容（响应）</li><li><p>浏览器负责下载响应内容<br>HTTP的作用就是指导浏览器和服务器的沟通</p><hr><p>  curl -s -v -H “lalala” – “<a href="http://www.baidu.com&quot;" target="_blank" rel="noopener">www.baidu.com&quot;</a><br>curl:发出网络请求并接收数据s:不要显示进度 v:使请求和响应更详细 -H：显示请求头</p></li></ul><p>发出请求：</p><pre><code>1. 动词(GET/POST) 路径(/xxx) 协议/版本(HTTP/1.1)2. Key1: value12. Key2: value22. Key3: value32. 希望返回内容:xxx/xxx(Accept:text/html)2. 用户代理：xxxx(User-Agent:curl/xxxx)2. 访问主机：(Host:xxxx)3. (回车)4. 要上传的数据</code></pre><p>响应：</p><pre><code>1. 协议/版本号 状态码 状态解释2 Key1: value12 Key2: value22 Content-Length: 179312 Content-Type: text/html;charset:utf-8;34 要下载的内容</code></pre><p>可以用开发者工具的Network查看响应的第4部分</p>]]></content>
+    <content type="html"><![CDATA[<h2>http入门</h2><p></p><h4>一些零碎的知识点</h4><p></p><ul><li><p>www:world wide web,万维网之父：Tim Berners-Lee</p></li><li><p>URI(统一资源标识符):uniform resource identifier</p></li><li><p>URL(统一资源定位符):uniform resource locator</p></li><li><p>URN(统一资源命名符)：uniform resource name</p></li></ul><p>通过urn来确定一个<em>唯一</em> 的资源<br>通过url来确定一个地址（网址）但不清楚其中内容是什么，并且其内容可以更换<br>uri是url和urn的统称,URN定义某事物的身份，而URL提供查找该事物的方法。</p><p><img src="https://i.loli.net/2018/03/31/5abf6f72acaa0.jpg" alt="url"><br><a id="more"></a></p><ul><li><p>DNS(域名系统):domain name system<br>是互联网的一项服务。它作为将域名和IP地址相互映射的一个分布式数据库</p></li><li><p>修改host文件可以暂时科学上网</p></li><li>.com , .cn , .mobi etc 是顶级（一级）域名 ； xxx是二级域名 ；www.   是三级域名 ； （交流中默认xxx是一级域名）</li></ul><h2>请求与响应</h2><p><img src="https://i.loli.net/2018/03/31/5abf72dfc38cb.jpg" alt="请求与响应"><br>http协议下服务器与浏览器一般是单项访问，如同打乒乓<br>使用qq聊天就不能算是http协议<br>每一台服务器有很多端口，每一个端口只有一种功能,其中80端口是用于服务http协议,如果要做一个后台服务器，必须将80端口暴露给人用</p><ul><li>浏览器负责发起请求</li><li>服务器在80端口接收请求</li><li>服务器负责返回内容（响应）</li><li><p>浏览器负责下载响应内容<br>HTTP的作用就是指导浏览器和服务器的沟通</p><hr><p>  curl -s -v -H “lalala” – “<a href="http://www.baidu.com&quot;" target="_blank" rel="noopener">www.baidu.com&quot;</a><br>curl:发出网络请求并接收数据s:不要显示进度 v:使请求和响应更详细 -H：显示请求头</p></li></ul><p>发出请求：</p><pre><code>1. 动词(GET/POST) 路径(/xxx) 协议/版本(HTTP/1.1)2. Key1: value12. Key2: value22. Key3: value32. 希望返回内容:xxx/xxx(Accept:text/html)2. 用户代理：xxxx(User-Agent:curl/xxxx)2. 访问主机：(Host:xxxx)3. (回车)4. 要上传的数据</code></pre><p>响应：</p><pre><code>1. 协议/版本号 状态码 状态解释2 Key1: value12 Key2: value22 Content-Length: 179312 Content-Type: text/html;charset:utf-8;34 要下载的内容</code></pre><p>可以用开发者工具的Network查看响应的第4部分</p>]]></content>
     
     <summary type="html">
     
-      &lt;p&gt;##http入门&lt;/p&gt;
-&lt;p&gt;####一些零碎的知识点&lt;/p&gt;
+      &lt;h2&gt;http入门&lt;/h2&gt;
+
+&lt;p&gt;&lt;/p&gt;&lt;h4&gt;一些零碎的知识点&lt;/h4&gt;&lt;p&gt;&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;p&gt;www:world wide web,万维网之父：Tim Berners-Lee&lt;/p&gt;
 &lt;/li&gt;
@@ -50,17 +51,45 @@
   </entry>
   
   <entry>
+    <title>暗时间阅读笔记</title>
+    <link href="http://yoursite.com/2018/03/31/%E6%9A%97%E6%97%B6%E9%97%B4/"/>
+    <id>http://yoursite.com/2018/03/31/暗时间/</id>
+    <published>2018-03-31T11:36:45.000Z</published>
+    <updated>2018-04-03T13:36:03.252Z</updated>
+    
+    <content type="html"><![CDATA[<p>第一次接触《暗时间》这本书是在2015年吧，当时读来没有太多感受。现在走在前端学习的道路上，再翻看这本书，每一小节都是干货，想要将其中的一些内容身体力行地实践</p><h3>学习习惯</h3><ol><li><p>人与人之间学习的差距在于思考的时间与深度</p></li><li><p>感到焦虑时不妨思考，甚至可以去理性分析和思考焦虑的问题本身，将其拆解，分析来源，不知不觉中，大脑的工作重心就从情绪模块转向了推理模块，这思考也可能顺带更有效地解决导致焦虑的问题。</p></li><li><p>学习一项知识有三问：它的：本质、第一原则、知识结构</p></li><li><p>善于利用“时间的下脚料”，也同时善于创造整块时间</p></li></ol>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;第一次接触《暗时间》这本书是在2015年吧，当时读来没有太多感受。现在走在前端学习的道路上，再翻看这本书，每一小节都是干货，想要将其中的一些内容身体力行地实践&lt;/p&gt;
+&lt;h3&gt;学习习惯&lt;/h3&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;人与人之间学习的差距在于思考的时间与深度&lt;/p&gt;
+&lt;
+      
+    
+    </summary>
+    
+    
+      <category term="阅读" scheme="http://yoursite.com/tags/%E9%98%85%E8%AF%BB/"/>
+    
+  </entry>
+  
+  <entry>
     <title>入门：脚本 笔记</title>
     <link href="http://yoursite.com/2018/03/30/%E5%85%A5%E9%97%A8%EF%BC%9A%E8%84%9A%E6%9C%AC/"/>
     <id>http://yoursite.com/2018/03/30/入门：脚本/</id>
     <published>2018-03-30T09:36:45.000Z</published>
-    <updated>2018-03-31T11:32:25.582Z</updated>
+    <updated>2018-04-03T13:20:57.798Z</updated>
     
-    <content type="html"><![CDATA[<p>##命令行 “.bashrc”的小用处<br>1.在用户目录下创建 .bashrc 文件</p><pre><code>touch ~/.bashrc</code></pre><p>用编辑器在这个文件里创建一些命令，就可以在进入Git bash之前执行任何命令<br>2.在.bashrc中添加alias命令来简化已有命令</p><pre><code>alias n=&quot;mkdir ~/a.html&quot;</code></pre><p>作用是运行<kbd>n</kbd>就在用户目录创建a.html文件<br>你可以把常用的命令进行简化使git操作简单很多</p><p>3.可以在“.bashrc”中添加环境变量</p><a id="more"></a><p>4.设置PATH</p><pre><code>export PATH=&quot;目录的绝对路径:$PATH&quot;</code></pre><p>可以在PATH里添加一个目录，被你添加到PATH中的目录下的文件都可以不需要加路径直接运行，你每次在 Bash 里面输入一个命令时（比如 ls、cp、demo），Bash 都会去 PATH 列表里面寻找对应的文件，如果找到了就执行。</p><p><hr></p><p>##脚本<br>在用户目录创建一个名为“demo”的文件（后缀随意）<br>用编辑器编辑它:</p><pre><code>cd ~/desktopmkdir scriptcd scripttouch a.html b.css</code></pre><p>在bash中用<kbd>sh</kbd>命令执行这个脚本</p><pre><code>sh ~/demo</code></pre><p>你就可以在桌面上看到 “script” 文件，点进去还有a.html, b.css<br>这就是脚本，写给计算机看的剧本，计算机会按你写的命令一条条执行。</p><p>####在脚本中引入参数<br>把“demo”内容改成：</p><pre><code>cd ~/desktopmkdir $1cd $1touch $2.html $3.css</code></pre><p>执行脚本时加上参数：</p><pre><code>sh ~/demo ni shi zhu</code></pre><p>你就可以在桌面上看到 “ni” 文件，点进去还有shi.html,  zhu.css<br>当你在脚本女重写入$符号，计算机就会按数字顺序读取你输入的参数</p><p>上面我们写的脚本叫做 Bash Script（Bash脚本），JS 的全称叫做 JavaScript（Java脚本），虽然 JS 和 Java 没什么关系，但是 JS 依然是一种脚本。</p><p>我们在 Bash 命令行里输入 Bash 命令，也可以在 Node.js 命令行里输入 JS 命令,Bash 脚本能做的事情，JS 脚本也能做。(sh demo.sh 对应 node demo.js）</p><p>如果你安装过node.js 在bash里输入node即可进入node运行环境</p><p>两者语法会有所不同，不必专门去学，需要用到时去学即可<br>在Google上查询语法的关键字应是：</p><pre><code>bash(node.js) + xxxxx</code></pre><p>####shebang<br>我们每次执行js脚本都要用 <kbd>node</kbd> 来执行(不知道怎么在node环境中执行？)，能不能做到不加 node 也能执行呢（也就是指定执行环境），可以，在 js脚本第一行加上这一句即可：</p><pre><code>#!/usr/bin/env node</code></pre><p>所以shebang的作用就是指定执行环境</p>]]></content>
+    <content type="html"><![CDATA[<p></p><h2>命令行 “.bashrc”的小用处</h2><br>1.在用户目录下创建 .bashrc 文件<p></p><pre><code>touch ~/.bashrc</code></pre><p>用编辑器在这个文件里创建一些命令，就可以在进入Git bash之前执行任何命令<br>2.在.bashrc中添加alias命令来简化已有命令</p><pre><code>alias n=&quot;mkdir ~/a.html&quot;</code></pre><p>作用是运行<kbd>n</kbd>就在用户目录创建a.html文件<br>你可以把常用的命令进行简化使git操作简单很多</p><p>3.可以在“.bashrc”中添加环境变量</p><a id="more"></a><p>4.设置PATH</p><pre><code>export PATH=&quot;目录的绝对路径:$PATH&quot;</code></pre><p>可以在PATH里添加一个目录，被你添加到PATH中的目录下的文件都可以不需要加路径直接运行，你每次在 Bash 里面输入一个命令时（比如 ls、cp、demo），Bash 都会去 PATH 列表里面寻找对应的文件，如果找到了就执行。</p><p><hr></p><p>##脚本<br>在用户目录创建一个名为“demo”的文件（后缀随意）<br>用编辑器编辑它:</p><pre><code>cd ~/desktopmkdir scriptcd scripttouch a.html b.css</code></pre><p>在bash中用<kbd>sh</kbd>命令执行这个脚本</p><pre><code>sh ~/demo</code></pre><p>你就可以在桌面上看到 “script” 文件，点进去还有a.html, b.css<br>这就是脚本，写给计算机看的剧本，计算机会按你写的命令一条条执行。</p><p></p><h4> 在脚本中引入参数</h4><br>把“demo”内容改成：<p></p><pre><code>cd ~/desktopmkdir $1cd $1touch $2.html $3.css</code></pre><p>执行脚本时加上参数：</p><pre><code>sh ~/demo ni shi zhu</code></pre><p>你就可以在桌面上看到 “ni” 文件，点进去还有shi.html,  zhu.css<br>当你在脚本女重写入$符号，计算机就会按数字顺序读取你输入的参数</p><p>上面我们写的脚本叫做 Bash Script（Bash脚本），JS 的全称叫做 JavaScript（Java脚本），虽然 JS 和 Java 没什么关系，但是 JS 依然是一种脚本。</p><p>我们在 Bash 命令行里输入 Bash 命令，也可以在 Node.js 命令行里输入 JS 命令,Bash 脚本能做的事情，JS 脚本也能做。(sh demo.sh 对应 node demo.js）</p><p>如果你安装过node.js 在bash里输入node即可进入node运行环境</p><p>两者语法会有所不同，不必专门去学，需要用到时去学即可<br>在Google上查询语法的关键字应是：</p><pre><code>bash(node.js) + xxxxx</code></pre><p></p><h4> shebang</h4><br>我们每次执行js脚本都要用 <kbd>node</kbd> 来执行(不知道怎么在node环境中执行？)，能不能做到不加 node 也能执行呢（也就是指定执行环境），可以，在 js脚本第一行加上这一句即可：<p></p><pre><code>#!/usr/bin/env node</code></pre><p>所以shebang的作用就是指定执行环境</p>]]></content>
     
     <summary type="html">
     
-      &lt;p&gt;##命令行 “.bashrc”的小用处&lt;br&gt;1.在用户目录下创建 .bashrc 文件&lt;/p&gt;
+      &lt;p&gt;&lt;/p&gt;&lt;h2&gt;命令行 “.bashrc”的小用处&lt;/h2&gt;&lt;br&gt;1.在用户目录下创建 .bashrc 文件&lt;p&gt;&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;touch ~/.bashrc
 &lt;/code&gt;&lt;/pre&gt;&lt;p&gt;用编辑器在这个文件里创建一些命令，就可以在进入Git bash之前执行任何命令&lt;br&gt;2.在.bashrc中添加alias命令来简化已有命令&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;alias n=&amp;quot;mkdir ~/a.html&amp;quot;
@@ -110,22 +139,40 @@
   </entry>
   
   <entry>
+    <title>如何用css制作一个太极图案</title>
+    <link href="http://yoursite.com/2018/03/24/%E5%AD%A6%E4%B9%A0%E7%94%9F%E6%B4%BB%E4%B8%AD%E7%BB%86%E7%A2%8E%E7%9A%84%E5%8F%91%E7%8E%B0/"/>
+    <id>http://yoursite.com/2018/03/24/学习生活中细碎的发现/</id>
+    <published>2018-03-24T06:44:05.000Z</published>
+    <updated>2018-04-03T13:33:47.918Z</updated>
+    
+    <content type="html"><![CDATA[<p>今天在网上写大物实验报告时产生了很大的焦虑情绪，极大地影响我对完成后续任务心态，一度想放弃，关键在于我打开编辑器想做一些简单工作来偷懒的时候（写博客），我逐渐恢复状态。因此我觉得是不是可以在下次状态不好时，在真正进入任务之前先做一些预热：背单词，罗列明日的任务等缓解焦虑的状态。<br>除此以外对于为什么在网上填写实验报告那么让人揪心进行分析：</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;今天在网上写大物实验报告时产生了很大的焦虑情绪，极大地影响我对完成后续任务心态，一度想放弃，关键在于我打开编辑器想做一些简单工作来偷懒的时候（写博客），我逐渐恢复状态。因此我觉得是不是可以在下次状态不好时，在真正进入任务之前先做一些预热：背单词，罗列明日的任务等缓解焦虑的状
+      
+    
+    </summary>
+    
+    
+      <category term="随笔" scheme="http://yoursite.com/tags/%E9%9A%8F%E7%AC%94/"/>
+    
+  </entry>
+  
+  <entry>
     <title>用Hexo+Github搭建一个博客（不完全指南）</title>
     <link href="http://yoursite.com/2018/03/07/%E7%94%A8Hexo-Github%E6%90%AD%E5%BB%BA%E4%B8%80%E4%B8%AA%E5%8D%9A%E5%AE%A2/"/>
     <id>http://yoursite.com/2018/03/07/用Hexo-Github搭建一个博客/</id>
     <published>2018-03-07T12:48:05.000Z</published>
-    <updated>2018-03-24T11:41:13.633Z</updated>
+    <updated>2018-04-03T13:22:12.299Z</updated>
     
-    <content type="html"><![CDATA[<h3 id="安装Hexo"><a href="#安装Hexo" class="headerlink" title="安装Hexo"></a>安装Hexo</h3><p> 在gitbash 中输入：</p><pre><code>npm install -g hexo-cli</code></pre><h3 id="Github上创建一个新仓库"><a href="#Github上创建一个新仓库" class="headerlink" title="Github上创建一个新仓库"></a>Github上创建一个新仓库</h3><p>在 GitHub 上新建一个空 repo，repo 名称是「你的用户名.github.io」（请将你的用户名替换成真正的用户名）</p><h3 id="创建目录"><a href="#创建目录" class="headerlink" title="创建目录"></a>创建目录</h3><p>在任意空白处创建一个文件夹，用Gitbash打开该文件夹，并执行以下指令</p><pre><code>hexo init</code></pre><p>Hexo 即会自动在目标文件夹建立网站所需要的所有文件</p><a id="more"></a><h3 id="安装依赖包"><a href="#安装依赖包" class="headerlink" title="安装依赖包"></a>安装依赖包</h3><pre><code>npm install</code></pre><h3 id="编辑网站配置"><a href="#编辑网站配置" class="headerlink" title="编辑网站配置"></a>编辑网站配置</h3><p>   用vs code编辑 _config.yml 文件<br>    1.把第 6 行的 title 改成你想要的名字<br>    2.把第 9 行的 author 改成你的大名<br>    3.把最后一行的 type 改成 type: git<br>    4.在最后一行后面新增一行，左边与 type 平齐，加上一行 repo: 仓库地址 （请将仓库地址改为「你的用户名.github.io」对应的仓库地址</p><h3 id="安装-git-部署插件"><a href="#安装-git-部署插件" class="headerlink" title="安装 git 部署插件"></a>安装 git 部署插件</h3><pre><code>npm install hexo-deployer-git --save</code></pre><h3 id="生成网页并部署"><a href="#生成网页并部署" class="headerlink" title="生成网页并部署"></a>生成网页并部署</h3><p>gitbash中输入</p><pre><code>hexo generatehexo deploy</code></pre><p>出现以下提示说明部署成功：</p><pre><code>[info] Deploy done: git</code></pre>]]></content>
+    <content type="html"><![CDATA[<h4> 安装Hexo</h4><br> 在gitbash 中输入：<br><br>    npm install -g hexo-cli<br><br><h4>Github上创建一个新仓库</h4><br>在 GitHub 上新建一个空 repo，repo 名称是「你的用户名.github.io」（请将你的用户名替换成真正的用户名）<br><br><h4>创建目录</h4><br>在任意空白处创建一个文件夹，用Gitbash打开该文件夹，并执行以下指令<br><br>    hexo init<br>Hexo 即会自动在目标文件夹建立网站所需要的所有文件<br><br><br><br><a id="more"></a><br><br><h4>安装依赖包</h4><pre><code>npm install</code></pre><h4>编辑网站配置</h4><br>   用vs code编辑 _config.yml 文件<br>    1.把第 6 行的 title 改成你想要的名字<br>    2.把第 9 行的 author 改成你的大名<br>    3.把最后一行的 type 改成 type: git<br>    4.在最后一行后面新增一行，左边与 type 平齐，加上一行 repo: 仓库地址 （请将仓库地址改为「你的用户名.github.io」对应的仓库地址<br><br><h4>安装 git 部署插件</h4><pre><code>npm install hexo-deployer-git --save</code></pre><p></p><h4>生成网页并部署</h4><br>gitbash中输入<p></p><pre><code>hexo generatehexo deploy</code></pre><p>出现以下提示说明部署成功：</p><pre><code>[info] Deploy done: git</code></pre>]]></content>
     
     <summary type="html">
     
-      &lt;h3 id=&quot;安装Hexo&quot;&gt;&lt;a href=&quot;#安装Hexo&quot; class=&quot;headerlink&quot; title=&quot;安装Hexo&quot;&gt;&lt;/a&gt;安装Hexo&lt;/h3&gt;&lt;p&gt; 在gitbash 中输入：&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;npm install -g hexo-cli
-&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&quot;Github上创建一个新仓库&quot;&gt;&lt;a href=&quot;#Github上创建一个新仓库&quot; class=&quot;headerlink&quot; title=&quot;Github上创建一个新仓库&quot;&gt;&lt;/a&gt;Github上创建一个新仓库&lt;/h3&gt;&lt;p&gt;在 GitHub 上新建一个空 repo，repo 名称是「你的用户名.github.io」（请将你的用户名替换成真正的用户名）&lt;/p&gt;
-&lt;h3 id=&quot;创建目录&quot;&gt;&lt;a href=&quot;#创建目录&quot; class=&quot;headerlink&quot; title=&quot;创建目录&quot;&gt;&lt;/a&gt;创建目录&lt;/h3&gt;&lt;p&gt;在任意空白处创建一个文件夹，用Gitbash打开该文件夹，并执行以下指令&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;hexo init
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Hexo 即会自动在目标文件夹建立网站所需要的所有文件&lt;/p&gt;
+      &lt;h4&gt; 安装Hexo&lt;/h4&gt;&lt;br&gt; 在gitbash 中输入：&lt;br&gt;&lt;br&gt;    npm install -g hexo-cli&lt;br&gt;&lt;br&gt;&lt;h4&gt;Github上创建一个新仓库&lt;/h4&gt;&lt;br&gt;在 GitHub 上新建一个空 repo，repo 名称是「你的用户名.github.io」（请将你的用户名替换成真正的用户名）&lt;br&gt;&lt;br&gt;&lt;h4&gt;创建目录&lt;/h4&gt;&lt;br&gt;在任意空白处创建一个文件夹，用Gitbash打开该文件夹，并执行以下指令&lt;br&gt;&lt;br&gt;    hexo init&lt;br&gt;Hexo 即会自动在目标文件夹建立网站所需要的所有文件&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;
     
     </summary>
     
