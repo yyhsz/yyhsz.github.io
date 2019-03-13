@@ -39,34 +39,6 @@
   </entry>
   
   <entry>
-    <title>暗时间阅读笔记</title>
-    <link href="http://yoursite.com/2018/03/31/%E6%9A%97%E6%97%B6%E9%97%B4/"/>
-    <id>http://yoursite.com/2018/03/31/暗时间/</id>
-    <published>2018-03-31T11:36:45.000Z</published>
-    <updated>2018-04-03T13:36:03.252Z</updated>
-    
-    <content type="html"><![CDATA[<p>第一次接触《暗时间》这本书是在2015年吧，当时读来没有太多感受。现在走在前端学习的道路上，再翻看这本书，每一小节都是干货，想要将其中的一些内容身体力行地实践</p><h3>学习习惯</h3><ol><li><p>人与人之间学习的差距在于思考的时间与深度</p></li><li><p>感到焦虑时不妨思考，甚至可以去理性分析和思考焦虑的问题本身，将其拆解，分析来源，不知不觉中，大脑的工作重心就从情绪模块转向了推理模块，这思考也可能顺带更有效地解决导致焦虑的问题。</p></li><li><p>学习一项知识有三问：它的：本质、第一原则、知识结构</p></li><li><p>善于利用“时间的下脚料”，也同时善于创造整块时间</p></li></ol>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;第一次接触《暗时间》这本书是在2015年吧，当时读来没有太多感受。现在走在前端学习的道路上，再翻看这本书，每一小节都是干货，想要将其中的一些内容身体力行地实践&lt;/p&gt;
-&lt;h3&gt;学习习惯&lt;/h3&gt;
-
-&lt;ol&gt;
-&lt;li&gt;&lt;p&gt;人与人之间学习的差距在于思考的时间与深度&lt;/p&gt;
-&lt;
-      
-    
-    </summary>
-    
-    
-      <category term="阅读" scheme="http://yoursite.com/tags/%E9%98%85%E8%AF%BB/"/>
-    
-  </entry>
-  
-  <entry>
     <title>入门：HTTP 笔记</title>
     <link href="http://yoursite.com/2018/03/31/%E5%85%A5%E9%97%A8%EF%BC%9AHTTP/"/>
     <id>http://yoursite.com/2018/03/31/入门：HTTP/</id>
@@ -97,6 +69,34 @@
     
     
       <category term="前端" scheme="http://yoursite.com/tags/%E5%89%8D%E7%AB%AF/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>暗时间阅读笔记</title>
+    <link href="http://yoursite.com/2018/03/31/%E6%9A%97%E6%97%B6%E9%97%B4/"/>
+    <id>http://yoursite.com/2018/03/31/暗时间/</id>
+    <published>2018-03-31T11:36:45.000Z</published>
+    <updated>2018-04-03T13:36:03.252Z</updated>
+    
+    <content type="html"><![CDATA[<p>第一次接触《暗时间》这本书是在2015年吧，当时读来没有太多感受。现在走在前端学习的道路上，再翻看这本书，每一小节都是干货，想要将其中的一些内容身体力行地实践</p><h3>学习习惯</h3><ol><li><p>人与人之间学习的差距在于思考的时间与深度</p></li><li><p>感到焦虑时不妨思考，甚至可以去理性分析和思考焦虑的问题本身，将其拆解，分析来源，不知不觉中，大脑的工作重心就从情绪模块转向了推理模块，这思考也可能顺带更有效地解决导致焦虑的问题。</p></li><li><p>学习一项知识有三问：它的：本质、第一原则、知识结构</p></li><li><p>善于利用“时间的下脚料”，也同时善于创造整块时间</p></li></ol>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;第一次接触《暗时间》这本书是在2015年吧，当时读来没有太多感受。现在走在前端学习的道路上，再翻看这本书，每一小节都是干货，想要将其中的一些内容身体力行地实践&lt;/p&gt;
+&lt;h3&gt;学习习惯&lt;/h3&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;人与人之间学习的差距在于思考的时间与深度&lt;/p&gt;
+&lt;
+      
+    
+    </summary>
+    
+    
+      <category term="阅读" scheme="http://yoursite.com/tags/%E9%98%85%E8%AF%BB/"/>
     
   </entry>
   
