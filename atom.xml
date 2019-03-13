@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2018-04-03T13:20:20.970Z</updated>
+  <updated>2018-05-12T14:02:31.922Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -17,36 +17,24 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>入门：HTTP 笔记</title>
-    <link href="http://yoursite.com/2018/03/31/%E5%85%A5%E9%97%A8%EF%BC%9AHTTP/"/>
-    <id>http://yoursite.com/2018/03/31/入门：HTTP/</id>
-    <published>2018-03-31T11:36:45.000Z</published>
-    <updated>2018-04-03T13:20:20.970Z</updated>
+    <title>原型链的部分理解</title>
+    <link href="http://yoursite.com/2018/05/12/%E5%8E%9F%E5%9E%8B%E9%93%BE%E7%9A%84%E9%83%A8%E5%88%86%E7%90%86%E8%A7%A3/"/>
+    <id>http://yoursite.com/2018/05/12/原型链的部分理解/</id>
+    <published>2018-05-12T13:41:22.000Z</published>
+    <updated>2018-05-12T14:02:31.922Z</updated>
     
-    <content type="html"><![CDATA[<h2>http入门</h2><p></p><h4>一些零碎的知识点</h4><p></p><ul><li><p>www:world wide web,万维网之父：Tim Berners-Lee</p></li><li><p>URI(统一资源标识符):uniform resource identifier</p></li><li><p>URL(统一资源定位符):uniform resource locator</p></li><li><p>URN(统一资源命名符)：uniform resource name</p></li></ul><p>通过urn来确定一个<em>唯一</em> 的资源<br>通过url来确定一个地址（网址）但不清楚其中内容是什么，并且其内容可以更换<br>uri是url和urn的统称,URN定义某事物的身份，而URL提供查找该事物的方法。</p><p><img src="https://i.loli.net/2018/03/31/5abf6f72acaa0.jpg" alt="url"><br><a id="more"></a></p><ul><li><p>DNS(域名系统):domain name system<br>是互联网的一项服务。它作为将域名和IP地址相互映射的一个分布式数据库</p></li><li><p>修改host文件可以暂时科学上网</p></li><li>.com , .cn , .mobi etc 是顶级（一级）域名 ； xxx是二级域名 ；www.   是三级域名 ； （交流中默认xxx是一级域名）</li></ul><h2>请求与响应</h2><p><img src="https://i.loli.net/2018/03/31/5abf72dfc38cb.jpg" alt="请求与响应"><br>http协议下服务器与浏览器一般是单项访问，如同打乒乓<br>使用qq聊天就不能算是http协议<br>每一台服务器有很多端口，每一个端口只有一种功能,其中80端口是用于服务http协议,如果要做一个后台服务器，必须将80端口暴露给人用</p><ul><li>浏览器负责发起请求</li><li>服务器在80端口接收请求</li><li>服务器负责返回内容（响应）</li><li><p>浏览器负责下载响应内容<br>HTTP的作用就是指导浏览器和服务器的沟通</p><hr><p>  curl -s -v -H “lalala” – “<a href="http://www.baidu.com&quot;" target="_blank" rel="noopener">www.baidu.com&quot;</a><br>curl:发出网络请求并接收数据s:不要显示进度 v:使请求和响应更详细 -H：显示请求头</p></li></ul><p>发出请求：</p><pre><code>1. 动词(GET/POST) 路径(/xxx) 协议/版本(HTTP/1.1)2. Key1: value12. Key2: value22. Key3: value32. 希望返回内容:xxx/xxx(Accept:text/html)2. 用户代理：xxxx(User-Agent:curl/xxxx)2. 访问主机：(Host:xxxx)3. (回车)4. 要上传的数据</code></pre><p>响应：</p><pre><code>1. 协议/版本号 状态码 状态解释2 Key1: value12 Key2: value22 Content-Length: 179312 Content-Type: text/html;charset:utf-8;34 要下载的内容</code></pre><p>可以用开发者工具的Network查看响应的第4部分</p>]]></content>
+    <content type="html"><![CDATA[<p>根据上课内容和查阅相关博客，谈谈对原型链的理解</p><p><hr><br>对于实例（instance）一般用   <strong>proto</strong>   来访问其原型<br><br>对于构造函数（constructor）一般用 prototype 来访问其原型</p><p><img src="https://i.loli.net/2018/05/12/5af6f2564d140.jpg" alt="prototype"></p><p><img src="https://i.loli.net/2018/05/12/5af6f3e70dcd5.jpg" alt="prototype2"><br>只要记住以下重要公式即可</p><pre><code>var 对象 = new 函数()对象.__proto__ === 函数.prototype</code></pre>]]></content>
     
     <summary type="html">
     
-      &lt;h2&gt;http入门&lt;/h2&gt;
-
-&lt;p&gt;&lt;/p&gt;&lt;h4&gt;一些零碎的知识点&lt;/h4&gt;&lt;p&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;www:world wide web,万维网之父：Tim Berners-Lee&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;URI(统一资源标识符):uniform resource identifier&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;URL(统一资源定位符):uniform resource locator&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;URN(统一资源命名符)：uniform resource name&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;通过urn来确定一个&lt;em&gt;唯一&lt;/em&gt; 的资源&lt;br&gt;通过url来确定一个地址（网址）但不清楚其中内容是什么，并且其内容可以更换&lt;br&gt;uri是url和urn的统称,URN定义某事物的身份，而URL提供查找该事物的方法。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;https://i.loli.net/2018/03/31/5abf6f72acaa0.jpg&quot; alt=&quot;url&quot;&gt;&lt;br&gt;
+      
+      
+        &lt;p&gt;根据上课内容和查阅相关博客，谈谈对原型链的理解&lt;/p&gt;
+&lt;p&gt;&lt;hr&gt;&lt;br&gt;对于实例（instance）一般用   &lt;strong&gt;proto&lt;/strong&gt;   来访问其原型&lt;br&gt;&lt;br&gt;对于构造函数（constructor）一般用 prototype 来访问其原型
+      
     
     </summary>
     
-    
-      <category term="前端" scheme="http://yoursite.com/tags/%E5%89%8D%E7%AB%AF/"/>
     
   </entry>
   
@@ -75,6 +63,40 @@
     
     
       <category term="阅读" scheme="http://yoursite.com/tags/%E9%98%85%E8%AF%BB/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>入门：HTTP 笔记</title>
+    <link href="http://yoursite.com/2018/03/31/%E5%85%A5%E9%97%A8%EF%BC%9AHTTP/"/>
+    <id>http://yoursite.com/2018/03/31/入门：HTTP/</id>
+    <published>2018-03-31T11:36:45.000Z</published>
+    <updated>2018-04-03T14:06:02.293Z</updated>
+    
+    <content type="html"><![CDATA[<h2>http入门</h2><p></p><h4>一些零碎的知识点</h4><p></p><ul><li><p>www:world wide web,万维网之父：Tim Berners-Lee</p></li><li><p>URI(统一资源标识符):uniform resource identifier</p></li><li><p>URL(统一资源定位符):uniform resource locator</p></li><li><p>URN(统一资源命名符)：uniform resource name</p></li></ul><p>通过urn来确定一个<em>唯一</em> 的资源<br>通过url来确定一个地址（网址）但不清楚其中内容是什么，并且其内容可以更换<br>uri是url和urn的统称,URN定义某事物的身份，而URL提供查找该事物的方法。</p><p><img src="https://i.loli.net/2018/03/31/5abf6f72acaa0.jpg" alt="url"><br><a id="more"></a></p><ul><li><p>DNS(域名系统):domain name system<br>是互联网的一项服务。它作为将域名和IP地址相互映射的一个分布式数据库</p></li><li><p>修改host文件可以暂时科学上网</p></li><li>.com , .cn , .mobi etc 是顶级（一级）域名 ； xxx是二级域名 ；www.   是三级域名 ； （交流中默认xxx是一级域名）</li></ul><h2>请求与响应</h2><p><img src="https://i.loli.net/2018/03/31/5abf72dfc38cb.jpg" alt="请求与响应"><br>http协议下服务器与浏览器一般是单项访问，如同打乒乓<br>使用qq聊天就不能算是http协议<br>每一台服务器有很多端口，每一个端口只有一种功能,其中80端口是用于服务http协议,如果要做一个后台服务器，必须将80端口暴露给人用</p><ul><li>浏览器负责发起请求</li><li>服务器在80端口接收请求</li><li>服务器负责返回内容（响应）</li><li><p>浏览器负责下载响应内容<br>HTTP的作用就是指导浏览器和服务器的沟通</p><hr><p>  curl -s -v -H “lalala” – “<a href="http://www.baidu.com&quot;" target="_blank" rel="noopener">www.baidu.com&quot;</a><br>curl:发出网络请求并接收数据s:不要显示进度 v:使请求和响应更详细 -H：显示请求头</p></li></ul><p>发出请求：</p><pre><code>1. 动词(GET/POST) 路径(/xxx) 协议/版本(HTTP/1.1)2. Key1: value12. Key2: value22. Key3: value32. 希望返回内容:xxx/xxx(Accept:text/html)2. 用户代理：xxxx(User-Agent:curl/xxxx)2. 访问主机：(Host:xxxx)3. (回车)4. 要上传的数据</code></pre><p>响应：</p><pre><code>1. 协议/版本号 状态码 状态解释2 Key1: value12 Key2: value22 Content-Length: 179312 Content-Type: text/html;charset:utf-8;34 要下载的内容</code></pre><p>可以用开发者工具的Network查看响应的第4部分</p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;h2&gt;http入门&lt;/h2&gt;
+
+&lt;p&gt;&lt;/p&gt;&lt;h4&gt;一些零碎的知识点&lt;/h4&gt;&lt;p&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;www:world wide web,万维网之父：Tim Berners-Lee&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;URI(统一资源标识符):uniform resource identifier&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;URL(统一资源定位符):uniform resource locator&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;URN(统一资源命名符)：uniform resource name&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;通过urn来确定一个&lt;em&gt;唯一&lt;/em&gt; 的资源&lt;br&gt;通过url来确定一个地址（网址）但不清楚其中内容是什么，并且其内容可以更换&lt;br&gt;uri是url和urn的统称,URN定义某事物的身份，而URL提供查找该事物的方法。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://i.loli.net/2018/03/31/5abf6f72acaa0.jpg&quot; alt=&quot;url&quot;&gt;&lt;br&gt;
+    
+    </summary>
+    
+    
+      <category term="前端" scheme="http://yoursite.com/tags/%E5%89%8D%E7%AB%AF/"/>
     
   </entry>
   
@@ -139,11 +161,11 @@
   </entry>
   
   <entry>
-    <title>如何用css制作一个太极图案</title>
+    <title>细碎的总结</title>
     <link href="http://yoursite.com/2018/03/24/%E5%AD%A6%E4%B9%A0%E7%94%9F%E6%B4%BB%E4%B8%AD%E7%BB%86%E7%A2%8E%E7%9A%84%E5%8F%91%E7%8E%B0/"/>
     <id>http://yoursite.com/2018/03/24/学习生活中细碎的发现/</id>
     <published>2018-03-24T06:44:05.000Z</published>
-    <updated>2018-04-03T13:33:47.918Z</updated>
+    <updated>2018-04-04T01:40:47.630Z</updated>
     
     <content type="html"><![CDATA[<p>今天在网上写大物实验报告时产生了很大的焦虑情绪，极大地影响我对完成后续任务心态，一度想放弃，关键在于我打开编辑器想做一些简单工作来偷懒的时候（写博客），我逐渐恢复状态。因此我觉得是不是可以在下次状态不好时，在真正进入任务之前先做一些预热：背单词，罗列明日的任务等缓解焦虑的状态。<br>除此以外对于为什么在网上填写实验报告那么让人揪心进行分析：</p>]]></content>
     
